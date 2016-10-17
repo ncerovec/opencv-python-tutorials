@@ -56,5 +56,7 @@ while(1):
         break
     elif k == 27:
         break
+    elif k != 255:
+        print 'You pressed %d (0x%x), LSB: %d (%s)' % (k, k, k % 256, repr(chr(k%256)) if k%256 < 128 else '?')
 
 cv2.destroyAllWindows()
