@@ -38,7 +38,7 @@ while(cap.isOpened()):
         lower_red = np.array([0,50,50])
         upper_red = np.array([10,255,255])
 
-        #Threshold the HSV image to get only blue colors
+        #Threshold the HSV image to get only certain colors
         maskBlue = cv2.inRange(hsv, lower_blue, upper_blue)
         maskGreen = cv2.inRange(hsv, lower_green, upper_blue)
         maskRed = cv2.inRange(hsv, lower_red, upper_red)
